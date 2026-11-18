@@ -1,0 +1,55 @@
+{
+    "threats": [
+        {
+            "name": "Phishing",
+            "description": "Messages or websites designed to trick users into revealing passwords, account details or other sensitive information."
+        },
+        {
+            "name": "Fake Job Offers",
+            "description": "Fraudulent recruitment messages that may request payment, personal information or account credentials."
+        },
+        {
+            "name": "Impersonation Scams",
+            "description": "Scammers pretending to be banks, companies, government agencies or people you know."
+        }
+    ],
+
+    "reports": [
+        {
+            "id": "RPT001",
+            "title": "Fake Job Offer",
+            "platform": "WhatsApp",
+            "category": "Job Scam",
+            "status": "Suspicious"
+        },
+        {
+            "id": "RPT002",
+            "title": "Bank Verification Message",
+            "platform": "SMS",
+            "category": "Phishing",
+            "status": "Pending"
+        },
+        {
+            "id": "RPT003",
+            "title": "Prize Winning Message",
+            "platform": "Email",
+            "category": "Online Scam",
+            "status": "Reviewed"
+        }
+    ],
+
+    "safetyTips": [
+        {
+            "title": "Verify the sender",
+            "description": "Check that the message actually came from the person or organisation it claims to represent."
+        },
+        {
+            "title": "Avoid unknown links",
+            "description": "Do not open unexpected links before checking where they lead."
+        },
+        {
+            "title": "Be careful with urgency",
+            "description": "Scammers often pressure users to act immediately before they have time to verify information."
+        }
+    ]
+}

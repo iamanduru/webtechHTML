@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Dashboard | Ngao</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <a href="index.html" class="brand">
+            Ngao
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="report.html">
+                Report Scam
+            </a>
+
+            <a
+                href="user-dashboard.html"
+                class="active"
+            >
+                Dashboard
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <main>
+
+        <!-- DASHBOARD HEADER -->
+
+        <section class="dashboard-heading reveal">
+
+            <div>
+
+                <p class="eyebrow">
+                    USER DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome,
+                    <span id="dashboard-user-name">
+                        User
+                    </span>
+                </h1>
+
+                <p>
+                    Track your submitted reports and
+                    review their current status.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-actions">
+
+                <a
+                    href="report.html"
+                    class="btn btn-primary"
+                >
+                    Report a Scam
+                </a>
+
+                <button
+                    type="button"
+                    class="logout-button"
+                    id="logout-button"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SUMMARY CARDS
+        ========================== -->
+
+        <section class="dashboard-summary reveal">
+
+
+            <article class="summary-card">
+
+                <p class="summary-label">
+                    Total Reports
+                </p>
+
+                <p
+                    class="summary-value"
+                    id="total-reports"
+                >
+                    0
+                </p>
+
+                <p class="summary-description">
+                    Reports you have submitted
+                </p>
+
+            </article>
+
+
+
+            <article class="summary-card">
+
+                <p class="summary-label">
+                    Pending
+                </p>
+
+                <p
+                    class="summary-value"
+                    id="pending-reports"
+                >
+                    0
+                </p>
+
+                <p class="summary-description">
+                    Reports awaiting review
+                </p>
+
+            </article>
+
+
+
+            <article class="summary-card">
+
+                <p class="summary-label">
+                    Reviewed
+                </p>
+
+                <p
+                    class="summary-value"
+                    id="reviewed-reports"
+                >
+                    0
+                </p>
+
+                <p class="summary-description">
+                    Reports already reviewed
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             REPORTS SECTION
+        ========================== -->
+
+        <section class="dashboard-panel reveal">
+
+            <div class="dashboard-panel-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        REPORT HISTORY
+                    </p>
+
+                    <h2>
+                        My Reports
+                    </h2>
+
+                </div>
+
+
+                <select
+                    id="report-filter"
+                    class="report-filter"
+                >
+
+                    <option value="all">
+                        All Reports
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Reviewed">
+                        Reviewed
+                    </option>
+
+                    <option value="Suspicious">
+                        Suspicious
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="user-report-list">
+
+                <!-- JavaScript inserts reports here -->
+
+            </div>
+
+
+            <div
+                id="empty-reports"
+                class="empty-state"
+            >
+
+                <h3>
+                    No reports yet
+                </h3>
+
+                <p>
+                    When you submit suspicious digital
+                    activity, your reports will appear here.
+                </p>
+
+                <a
+                    href="report.html"
+                    class="btn btn-primary"
+                >
+                    Submit Your First Report
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SAFETY TIPS
+        ========================== -->
+
+        <section class="dashboard-panel reveal">
+
+            <div class="dashboard-panel-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        DIGITAL SAFETY
+                    </p>
+
+                    <h2>
+                        Quick Safety Tips
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="safety-tip-grid"
+                id="safety-tip-list"
+            >
+
+                <!-- Loaded from data.json -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+
+                <strong>
+                    Ngao
+                </strong>
+
+                <p>
+                    Digital Scam & Phishing Reporting Portal
+                </p>
+
+            </div>
+
+
+            <p>
+                &copy; 2026 Ngao. Academic Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Report a Scam | Ngao</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <a href="index.html" class="brand">
+            Ngao
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="report.html" class="active">
+                Report Scam
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="user-login.html">
+                User Portal
+            </a>
+
+            <a href="analyst-login.html">
+                Analyst Portal
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <!-- PAGE INTRO -->
+
+        <section class="report-intro reveal">
+
+            <p class="eyebrow">
+                REPORT SUSPICIOUS ACTIVITY
+            </p>
+
+            <h1>
+                Tell us what you received.
+            </h1>
+
+            <p>
+                Provide the details you have about a suspicious
+                message, link, email or online interaction.
+                Do not include passwords, PINs or other sensitive
+                personal information.
+            </p>
+
+        </section>
+
+
+        <!-- REPORT FORM -->
+
+        <section class="report-layout reveal">
+
+            <div class="report-form-container">
+
+                <form id="scam-report-form">
+
+
+                    <!-- TITLE -->
+
+                    <div class="form-group">
+
+                        <label for="report-title">
+                            Report Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="report-title"
+                            name="title"
+                            placeholder="Example: Suspicious bank message"
+                            minlength="5"
+                            maxlength="80"
+                            required
+                        >
+
+                        <small class="field-help">
+                            Give the report a short descriptive title.
+                        </small>
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="form-group">
+
+                        <label for="scam-category">
+                            Scam Category
+                        </label>
+
+                        <select
+                            id="scam-category"
+                            name="category"
+                            required
+                        >
+
+                            <option value="">
+                                Select a category
+                            </option>
+
+                            <option value="Phishing">
+                                Phishing
+                            </option>
+
+                            <option value="Fake Job Offer">
+                                Fake Job Offer
+                            </option>
+
+                            <option value="Impersonation">
+                                Impersonation
+                            </option>
+
+                            <option value="Payment Scam">
+                                Payment Scam
+                            </option>
+
+                            <option value="Prize Scam">
+                                Prize / Giveaway Scam
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PLATFORM -->
+
+                    <div class="form-group">
+
+                        <label for="report-platform">
+                            Where did you receive it?
+                        </label>
+
+                        <select
+                            id="report-platform"
+                            name="platform"
+                            required
+                        >
+
+                            <option value="">
+                                Select platform
+                            </option>
+
+                            <option value="WhatsApp">
+                                WhatsApp
+                            </option>
+
+                            <option value="Email">
+                                Email
+                            </option>
+
+                            <option value="SMS">
+                                SMS
+                            </option>
+
+                            <option value="Facebook">
+                                Facebook
+                            </option>
+
+                            <option value="Instagram">
+                                Instagram
+                            </option>
+
+                            <option value="Website">
+                                Website
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SENDER -->
+
+                    <div class="form-group">
+
+                        <label for="sender">
+                            Sender or Source
+                        </label>
+
+                        <input
+                            type="text"
+                            id="sender"
+                            name="sender"
+                            placeholder="Example: Unknown number or company name"
+                            maxlength="100"
+                        >
+
+                        <small class="field-help">
+                            Optional. Avoid entering private personal details.
+                        </small>
+
+                    </div>
+
+
+                    <!-- LINK -->
+
+                    <div class="form-group">
+
+                        <label for="suspicious-link">
+                            Suspicious Link
+                        </label>
+
+                        <input
+                            type="url"
+                            id="suspicious-link"
+                            name="link"
+                            placeholder="https://example.com"
+                        >
+
+                        <small class="field-help">
+                            Optional. Do not open the link just to copy it.
+                        </small>
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="form-group">
+
+                        <label for="report-description">
+                            Describe What Happened
+                        </label>
+
+                        <textarea
+                            id="report-description"
+                            name="description"
+                            placeholder="Describe the message or interaction and why it seemed suspicious..."
+                            minlength="20"
+                            maxlength="700"
+                            required
+                        ></textarea>
+
+                        <div class="character-count">
+                            <span id="description-count">0</span>
+                            / 700 characters
+                        </div>
+
+                    </div>
+
+
+                    <!-- WARNING SIGNS -->
+
+                    <fieldset class="warning-fieldset">
+
+                        <legend>
+                            What made it seem suspicious?
+                        </legend>
+
+                        <p class="field-help">
+                            Select all that apply.
+                        </p>
+
+
+                        <label class="checkbox-option">
+
+                            <input
+                                type="checkbox"
+                                name="warningSigns"
+                                value="Asked for password or PIN"
+                            >
+
+                            <span>
+                                Asked for a password, PIN or login details
+                            </span>
+
+                        </label>
+
+
+                        <label class="checkbox-option">
+
+                            <input
+                                type="checkbox"
+                                name="warningSigns"
+                                value="Asked for money"
+                            >
+
+                            <span>
+                                Asked for money or payment
+                            </span>
+
+                        </label>
+
+
+                        <label class="checkbox-option">
+
+                            <input
+                                type="checkbox"
+                                name="warningSigns"
+                                value="Urgent language"
+                            >
+
+                            <span>
+                                Used urgent or threatening language
+                            </span>
+
+                        </label>
+
+
+                        <label class="checkbox-option">
+
+                            <input
+                                type="checkbox"
+                                name="warningSigns"
+                                value="Unknown link"
+                            >
+
+                            <span>
+                                Included an unfamiliar or suspicious link
+                            </span>
+
+                        </label>
+
+
+                        <label class="checkbox-option">
+
+                            <input
+                                type="checkbox"
+                                name="warningSigns"
+                                value="Impersonation"
+                            >
+
+                            <span>
+                                Claimed to represent a trusted organisation
+                                or person
+                            </span>
+
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- ERROR MESSAGE -->
+
+                    <p
+                        id="report-error"
+                        class="error-message"
+                    ></p>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <p
+                        id="report-success"
+                        class="success-message"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="submit-report-btn"
+                    >
+                        Submit Report
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- SAFETY SIDE PANEL -->
+
+            <aside class="report-safety">
+
+                <p class="eyebrow">
+                    BEFORE YOU SUBMIT
+                </p>
+
+                <h2>
+                    Protect your information.
+                </h2>
+
+
+                <div class="safety-rule">
+
+                    <span>01</span>
+
+                    <div>
+
+                        <h3>
+                            Do not share passwords
+                        </h3>
+
+                        <p>
+                            Ngao will never ask for your account
+                            password, PIN or security codes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="safety-rule">
+
+                    <span>02</span>
+
+                    <div>
+
+                        <h3>
+                            Avoid interacting further
+                        </h3>
+
+                        <p>
+                            Do not respond to suspicious messages
+                            simply to gather more information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="safety-rule">
+
+                    <span>03</span>
+
+                    <div>
+
+                        <h3>
+                            This is a prototype
+                        </h3>
+
+                        <p>
+                            Submitted reports are stored locally
+                            for demonstration purposes only.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+
+                <strong>
+                    Ngao
+                </strong>
+
+                <p>
+                    Digital Scam & Phishing Reporting Portal
+                </p>
+
+            </div>
+
+            <p>
+                &copy; 2026 Ngao. Academic Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/report.js"></script>
+
+</body>
+
+</html>

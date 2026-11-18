@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Analyst Dashboard | Ngao</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <header class="site-header">
+
+        <a href="index.html" class="brand">
+            Ngao
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a
+                href="analyst-dashboard.html"
+                class="active"
+            >
+                Dashboard
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- DASHBOARD HEADING -->
+
+        <section class="dashboard-heading reveal">
+
+            <div>
+
+                <p class="eyebrow">
+                    SAFETY ANALYST
+                </p>
+
+                <h1>
+                    Welcome,
+                    <span id="analyst-name">
+                        Analyst
+                    </span>
+                </h1>
+
+                <p>
+                    Review submitted reports and update
+                    their current assessment status.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="logout-button"
+                id="analyst-logout-button"
+            >
+                Logout
+            </button>
+
+        </section>
+
+
+
+        <!-- SUMMARY -->
+
+        <section class="analyst-summary reveal">
+
+
+            <article class="summary-card">
+
+                <p class="summary-label">
+                    Total Reports
+                </p>
+
+                <p
+                    class="summary-value"
+                    id="analyst-total-reports"
+                >
+                    0
+                </p>
+
+                <p class="summary-description">
+                    Reports submitted to Ngao
+                </p>
+
+            </article>
+
+
+
+            <article class="summary-card">
+
+                <p class="summary-label">
+                    Pending
+                </p>
+
+                <p
+                    class="summary-value"
+                    id="analyst-pending-reports"
+                >
+                    0
+                </p>
+
+                <p class="summary-description">
+                    Awaiting analyst review
+                </p>
+
+            </article>
+
+
+
+            <article class="summary-card">
+
+                <p class="summary-label">
+                    Reviewed
+                </p>
+
+                <p
+                    class="summary-value"
+                    id="analyst-reviewed-reports"
+                >
+                    0
+                </p>
+
+                <p class="summary-description">
+                    Completed reviews
+                </p>
+
+            </article>
+
+
+
+            <article class="summary-card">
+
+                <p class="summary-label">
+                    Suspicious
+                </p>
+
+                <p
+                    class="summary-value"
+                    id="analyst-suspicious-reports"
+                >
+                    0
+                </p>
+
+                <p class="summary-description">
+                    Flagged for concern
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- REPORT MANAGEMENT -->
+
+        <section class="dashboard-panel reveal">
+
+            <div class="dashboard-panel-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        REPORT MANAGEMENT
+                    </p>
+
+                    <h2>
+                        Submitted Reports
+                    </h2>
+
+                </div>
+
+
+                <select
+                    id="analyst-report-filter"
+                    class="report-filter"
+                >
+
+                    <option value="all">
+                        All Reports
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Reviewed">
+                        Reviewed
+                    </option>
+
+                    <option value="Suspicious">
+                        Suspicious
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="analyst-report-list">
+
+                <!-- Reports inserted by JavaScript -->
+
+            </div>
+
+
+            <div
+                id="analyst-empty-state"
+                class="empty-state"
+            >
+
+                <h3>
+                    No reports available
+                </h3>
+
+                <p>
+                    Submitted reports will appear here
+                    when users report suspicious activity.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+
+                <strong>
+                    Ngao
+                </strong>
+
+                <p>
+                    Digital Scam & Phishing Reporting Portal
+                </p>
+
+            </div>
+
+
+            <p>
+                &copy; 2026 Ngao. Academic Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+    <script src="js/analyst-dashboard.js"></script>
+
+</body>
+
+</html>
